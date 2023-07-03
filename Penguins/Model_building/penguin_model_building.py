@@ -1,7 +1,6 @@
 import pandas as pd
 penguins = pd.read_csv('penguins_cleaned.csv')
 
-# Ordinal feature encoding
 # https://www.kaggle.com/pratik1120/penguin-dataset-eda-classification-and-clustering
 df = penguins.copy()
 target = 'species'
@@ -18,7 +17,7 @@ def target_encode(val):
 
 df['species'] = df['species'].apply(target_encode)
 
-# Separating X and y
+# Separating X and Y
 X = df.drop('species', axis=1)
 Y = df['species']
 
