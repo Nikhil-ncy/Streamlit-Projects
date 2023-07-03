@@ -47,7 +47,6 @@ penguins = penguins_raw.drop(columns=['species'])
 df = pd.concat([input_df,penguins],axis=0)
 
 # Encoding of ordinal features
-# https://www.kaggle.com/pratik1120/penguin-dataset-eda-classification-and-clustering
 encode = ['sex','island']
 for col in encode:
     dummy = pd.get_dummies(df[col], prefix=col)
